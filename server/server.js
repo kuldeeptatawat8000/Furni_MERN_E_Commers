@@ -1,6 +1,8 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const Database = require("./config/db");
+const authRouter = require("./routers/authRouters");
+const productRouter = require("./routers/productRoutes");
 
 dotenv.config(); // 👈 sabse upar
 
@@ -10,7 +12,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Test Route
+//  Route
+app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/auth", productRouter);
+
 app.get("/", (req, res) => {
   res.send("Hiii");
 });
