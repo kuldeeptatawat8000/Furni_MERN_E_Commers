@@ -11,6 +11,9 @@ furni-mern/
 │       │   ├── Footer.jsx
 │       │   ├── Loader.jsx
 │       │   └── ProtectedRoute.jsx
+|       |   |__ HomePage
+                |__
+                |__
 │       │
 │       ├── pages/            # All pages
 │       │   ├── Home.jsx
